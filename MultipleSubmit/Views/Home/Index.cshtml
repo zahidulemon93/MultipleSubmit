@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<form method="post" action="/Home/PostData">
+    @Html.AntiForgeryToken()
+    <label for="givenName">Given name</label>
+    <input type="text" name="givenName" id="givenName" /><br />
+
+    <label for="surname">Surname</label>
+    <input type="text" name="surname" id="surname" /><br />
+
+    <input type="submit" name="submitButton1" value="Submit Me!" />
+    <input type="submit" name="submitButton2" value="No Submit Me!" />
+</form>

@@ -1,0 +1,12 @@
+﻿@model  MultipleSubmit.Models.Customer
+
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <br />
+    <input type="submit" name="save" value="Save"
+           formaction="SaveForm" formmethod="post" />
+    <input type="submit" name="cancel" value="Cancel"
+           formaction="CancelForm" formmethod="post" />
+}

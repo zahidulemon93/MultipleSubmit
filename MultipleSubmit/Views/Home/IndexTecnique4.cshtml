@@ -1,0 +1,25 @@
+﻿@model  MultipleSubmit.Models.Customer
+
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <br />
+    <input type="submit" id="save" value="Save" />
+    <input type="submit" id="cancel" value="Cancel" />
+}
+
+<script>
+
+    $(document).ready(function () {
+
+    $("#save").click(function () {
+        $("form").attr("action", "/home/saveform");
+    });
+
+    $("#cancel").click(function () {
+        $("form").attr("action", "/home/cancelform");
+    });
+
+});
+</script>

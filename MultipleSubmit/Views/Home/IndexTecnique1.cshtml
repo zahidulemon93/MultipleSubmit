@@ -1,0 +1,10 @@
+﻿@model  MultipleSubmit.Models.Customer
+
+
+@using (Html.BeginForm("ProcessFormTechnique1", "Home", FormMethod.Post))
+{
+    @Html.EditorForModel()
+    <br />
+    <input type="submit" name="save" value="Save" />
+    <input type="submit" name="cancel" value="Cancel" />
+}
